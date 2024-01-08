@@ -25,9 +25,9 @@ $(document).ready(function() {
                 imagensCPA += '<img src="http://unisicoob.com.br/assinatura/imagem/cpa20.jpg" width="70" height="70">';
             } else if (cpaValue === "cea") {
                 imagensCPA += '<img src="http://unisicoob.com.br/assinatura/imagem/cea.jpg" width="70" height="70">';
-			} else if (cpaValue === "CPCS100") {
-				imagensCPA += '<img src="Imagens/CPC S100.png" width="180" height="70">';
-			}
+	    } else if (cpaValue === "CPCS100") {
+		imagensCPA += '<img src="Imagens/CPC S100.png" width="180" height="70">';
+	    }
         }
       
       //Modelo da assinatura Gerada
