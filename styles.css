@@ -1,0 +1,92 @@
+body {
+    background-image: url(Imagens/Fundo2.png);
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 0;
+    text-align: center;
+    font-family: Georgia;
+  }
+
+  hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+  }
+
+  .form-label {
+    font-weight: bold;
+  }
+
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    animation: pulse 2s infinite;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .btn-primary:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+    transform: scale(1.1);
+  }
+
+  .btn-primary:focus {
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
+    transform: scale(1.1);
+  }
+
+  .signature {
+    border: 1px solid #ccc;
+    width: 550px;
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #f8f9fa;
+  }
+
+  .signature-no-spacing {
+    line-height: 0.1;
+  }
+
+  .signature-paragraph {
+      font-family: Arial bold, sans-serif;
+      font-size: 13px;
+      color: #000000;
+      margin-top: 0;
+      margin-bottom: 0;
+      line-height: 1.5em;
+  }
+
+  .signature-title {
+      font-family: Arial bold, sans-serif;
+      font-weight: bold;
+      font-size: 16px;
+      color: #000000;
+      margin-top: 0;
+      margin-bottom: 0;
+      line-height: 1.5em;
+  }
+
+  #copySignatureButton {
+    margin-top: 20px;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+  }

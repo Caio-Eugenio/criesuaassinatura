@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Caio Eugenio"/>
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="Imagens/png" href="Imagens/Logotipo.png">
+    <title>Sicoob UNICNB - Assinatura</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Gerar Assinatura de e-mail</h1>
+    <hr>
+
+    <div id="parte1">
+        <form id="assinaturaForm">
+          <div class="mb-3">
+            <label for="nomeInput" class="form-label">Nome*</label>
+            <input type="text" class="form-control" id="nomeInput" placeholder="Digite seu nome" onkeyup="formatarNomesProprios()" required>
+          </div>
+          <div class="mb-3">
+            <div class="row">
+              <div class="col">
+                <label for="setorInput" class="form-label">Setor*</label>
+                <input type="text" class="form-control" id="setorInput" placeholder="Digite seu setor" required>
+              </div>
+              <div class="col">
+                <label for="funcaoInput" class="form-label">Função*</label>
+                <input type="text" class="form-control" id="funcaoInput" placeholder="Digite sua função" required>
+              </div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="row">
+              <div class="col">
+                <label for="paInput" class="form-label">PA*</label>
+                <input type="number" class="form-control" id="paInput" placeholder="Digite seu PA" required>
+              </div>
+              <div class="col">
+                <label for="ufInput" class="form-label">UF*</label>
+                <input type="text" class="form-control" id="ufInput" placeholder="(Ex: DF)" maxlength="2" style="text-transform: uppercase;" required>
+              </div>
+              <div class="col">
+                  <label for="ramalInput" class="form-label">Ramal</label>
+                  <input type="number" class="form-control" id="ramalInput" placeholder="Digite o ramal">
+                </div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <div class="row">
+              <div class="col">
+                <label for="telefoneInput" class="form-label">Telefone Fixo*</label>
+                <input type="tel" class="form-control" id="telefoneInput" placeholder="(99) 9999-9999" required>
+              </div>
+              <div class="col">
+                <label for="telefoneCorporativoInput" class="form-label">Telefone Corporativo</label>
+                <input type="tel" class="form-control" id="telefoneCorporativoInput" placeholder="(99) 99999-9999">
+              </div>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="emailInput" class="form-label">E-mail*</label>
+            <input type="email" class="form-control" id="emailInput" placeholder="Digite o e-mail" required>
+          </div>
+          <div class="mb-3">
+            <label for="cpaSelect" class="form-label" style="margin-right: 10px;">CPA:</label>
+            <div class="form-check form-check-inline cpaSelect">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="cpa10" name="cpa">
+              <label class="form-check-label" for="inlineCheckbox1">CPA 10</label>
+            </div>
+            <div class="form-check form-check-inline cpaSelect">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="cpa20" name="cpa">
+              <label class="form-check-label" for="inlineCheckbox2">CPA 20</label>
+            </div>
+            <div class="form-check form-check-inline cpaSelect">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="cea" name="cpa">
+              <label class="form-check-label" for="inlineCheckbox3">CEA</label>
+            </div>
+			<div class="form-check form-check-inline cpaSelect">
+              <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="CPCS100" name="cpa">
+              <label class="form-check-label" for="inlineCheckbox3">CPC S100</label>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Gerar Assinatura</button>
+      </form>
+    </div>
+
+    <hr>
+    <h1>Assinatura Gerada</h1>
+    <hr>
+    <div id="generatedSignature" class="mt-3 signature signature-no-spacing"></div>
+    <button id="copySignatureButton" class="btn btn-primary mt-3">Copiar Assinatura</button>
+  </div>
+
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+  <!-- Seu arquivo JavaScript externo -->
+  <script src="script.js"></script>
+</body>
+
+</html>
