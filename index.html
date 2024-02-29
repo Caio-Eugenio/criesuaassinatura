@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Caio Eugenio"/>
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="Imagens/png" href="Imagens/Logotipo.png">
+    <title>Sicoob UNICNB - Assinatura</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+	<div class="container">
+		<h1>Crie sua assinatura de e-mail</h1>
+		<hr>
+		<div class="content">
+            <div id="parte1">
+                <form id="assinaturaForm">
+					<div class="mb-3 position-relative">
+						<label for="nomeInput" class="form-label">Nome*</label>
+						<div class="input-group">
+							<span class="input-group-text"><i class="fas fa-user"></i></span>
+							<input type="text" class="form-control" id="nomeInput" placeholder="Digite seu nome" onkeyup="formatarPrimeiraLetra('nomeInput')" required>
+						</div>
+					</div>
+					<div class="mb-3">
+						<div class="row">
+							<div class="col">
+								<label for="setorInput" class="form-label">Setor*</label>
+								<div class="input-group">
+									<span class="input-group-text"><i class="fas fa-building"></i></span>
+									<input type="text" class="form-control" id="setorInput" placeholder="Digite seu setor" onkeyup="formatarPrimeiraLetra('setorInput')" required>
+								</div>
+							</div>
+							<div class="col">
+								<label for="funcaoInput" class="form-label">Função*</label>
+								<div class="input-group">
+									<span class="input-group-text"><i class="fas fa-user-tie"></i></span>
+									<input type="text" class="form-control" id="funcaoInput" placeholder="Digite sua função" onkeyup="formatarPrimeiraLetra('funcaoInput')" required>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mb-3">
+						<div class="row">
+							<div class="col">
+								<label for="paInput" class="form-label">PA*</label>
+								<div class="input-group">
+									<span class="input-group-text"><i class="fas fa-map-marker-alt"></i></span>
+									<input type="number" class="form-control" id="paInput" placeholder="(Ex: 00)" required>
+								</div>
+							</div>
+							<div class="col">
+								<label for="ufInput" class="form-label">UF*</label>
+								<div class="input-group">
+									<span class="input-group-text"><i class="fas fa-globe-americas"></i></span>
+									<input type="text" class="form-control" id="ufInput" placeholder="(Ex: DF)" maxlength="2" style="text-transform: uppercase;" oninput="this.value = this.value.replace(/[0-9]/g, '')" required>
+								</div>
+							</div>
+							<div class="col">
+								<label for="ramalInput" class="form-label">Ramal</label>
+								<div class="input-group">
+									<span class="input-group-text"><i class="fas fa-phone-alt"></i></span>
+									<input type="number" class="form-control" id="ramalInput" placeholder="Digite seu ramal">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mb-3">
+						<div class="row">
+							<div class="col">
+								<label for="telefoneInput" class="form-label">Telefone Fixo*</label>
+								<div class="input-group">
+									<span class="input-group-text"><i class="fas fa-phone"></i></span>
+									<input type="tel" class="form-control" id="telefoneInput" placeholder="(99) 9999-9999" required>
+								</div>
+							</div>
+							<div class="col">
+								<label for="telefoneCorporativoInput" class="form-label">Telefone Corporativo</label>
+								<div class="input-group">
+									<span class="input-group-text"><i class="fas fa-mobile-alt"></i></span>
+									<input type="tel" class="form-control" id="telefoneCorporativoInput" placeholder="(99) 99999-9999">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mb-3 position-relative">
+						<label for="emailInput" class="form-label">E-mail*</label>
+						<div class="input-group">
+							<span class="input-group-text"><i class="fas fa-envelope"></i></span>
+							<input type="text" class="form-control" id="emailInput" placeholder="Digite seu e-mail" required>
+						</div>
+						<div id="emailValidationMessage" style="color: red;"></div>
+					</div>
+					
+					<div class="mb-3" id="cpaSelect">
+						<label class="form-label" style="margin-right: 10px;">Certificações:</label>
+						<div class="checkbox-group row">
+							<div class="col">
+								<input type="checkbox" id="inlineCheckbox1" value="cpa10" name="cpa">
+								<label for="inlineCheckbox1" class="d-flex justify-content-center">CPA-10</label>
+							</div>
+							<div class="col">
+								<input type="checkbox" id="inlineCheckbox2" value="cpa20" name="cpa">
+								<label for="inlineCheckbox2" class="d-flex justify-content-center">CPA-20</label>
+							</div>
+							<div class="col">
+								<input type="checkbox" id="inlineCheckbox3" value="cea" name="cpa">
+								<label for="inlineCheckbox3" class="d-flex justify-content-center">CEA</label>
+							</div>
+							<div class="col">
+								<input type="checkbox" id="inlineCheckbox4" value="CPCS100" name="cpa">
+								<label for="inlineCheckbox4" class="d-flex justify-content-center">CPC-S100</label>
+							</div>
+						</div>
+					</div>
+				</form>
+            </div>
+			<div id="parte4">  
+				<div id="parte2">
+					<div>
+						<h1 class="text-center mb-4">Assinatura Gerada</h1>
+						<hr class="mb-4">
+						<div id="generatedSignature" class="signature p-4"></div>
+					</div>
+					
+				</div>
+				<div id="parte3">
+					<button id="copySignatureButton" class="btn btn-primary">
+						<i></i> Copiar Assinatura
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+			
+	
+  <!-- jQuery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+  <!-- Seu arquivo JavaScript externo -->
+  <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,182 @@
+body {
+    background-image: url(Imagens/Fundo2.png);
+    font-family: ont-family: 'Roboto', sans-serif;
+    padding: 20px;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 90%;
+    margin: 20px auto;
+    background-color: #ffffff; /* Fundo branco para destacar o conteúdo */
+    padding: 35px;
+    border-radius: 5px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
+    position: relative;
+    overflow: hidden;
+}
+
+.form-container {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    border-radius: 10px; /* Arredondamento das bordas */
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.form-label {
+    font-weight: bold;
+}
+
+.signature {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff; /* Fundo branco */
+}
+
+.signature-no-spacing {
+    line-height: 0.1;
+}
+
+.signature-paragraph {
+    font-family: Arial bold, sans-serif;
+    font-size: 14px;
+    color: #000000;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.5em;
+}
+
+.signature-title {
+    font-family: Arial bold, sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: #000000;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 1.5em;
+}
+
+#parte1 {
+    flex: 1 0 40%; /* Define a largura da parte 1 como 30% */
+    padding-right: 2%; /* Adicionando espaçamento à direita para separar do elemento ao lado */
+    border-right: 1px solid #ddd; /* Adiciona uma borda à direita do formulário */
+}
+
+#parte2 {
+    background-color: #f8f9fa; /* Fundo mais claro */
+    border-radius: 10px; /* Cantos arredondados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    padding: 20px; /* Espaçamento interno */
+    margin-left: 30px; /* Aumenta a margem esquerda */
+    padding-left: 2%; /* Adicionando espaçamento à esquerda para separar do elemento ao lado */
+	min-height: 430px; /* Altura máxima ajustada */
+}
+
+#parte2 hr {
+    border-top: 1px solid #ccc; /* Define a cor e o estilo da linha */
+    margin-bottom: 20px; /* Adiciona espaçamento abaixo da linha */
+}
+
+#parte3 {
+    text-align: center; /* Centraliza o conteúdo horizontalmente */
+    margin-top: 45px; /* Adiciona um espaço superior para separar a parte 3 das partes anteriores */
+}
+
+#parte4 {
+    flex: 1 0 50%; /* Define a largura da parte 4 como 100% */
+}
+
+#generatedSignature {
+    padding: 20px; /* Adicionando um preenchimento interno para melhorar a aparência */
+    background-color: #f8f9fa; /* Cor de fundo */
+    border: 1px solid #ccc; /* Borda */
+    border-radius: 5px; /* Arredondamento das bordas */
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    font-family: Georgia;
+}
+
+hr {
+    border-top: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+/* Estilo para os checkboxes */
+
+.checkbox-group input[type="checkbox"] {
+    display: none; /* Oculta os checkboxes */
+}
+
+.checkbox-group label {
+    display: block;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+	border-width: 1px; /* Defina a largura da borda */
+    border-style: solid; /* Estilo da borda */
+}
+
+.checkbox-group input[type="checkbox"] {
+    display: none; /* Esconde o checkbox nativo */
+}
+
+/* Estilos quando o mouse passa sobre os labels */
+.checkbox-group label:hover {
+    border-color: #629d53; /* Cor da borda ao passar o mouse */
+    border-width: 2px; /* Largura da borda ao passar o mouse */
+	transform: scale(1.05); /* Redimensiona ligeiramente o botão */
+	font-weight: bold;
+	color: #2d7d21;
+}
+
+/* Estilos para os checkboxes marcados */
+.checkbox-group input[type="checkbox"]:checked + label {
+    background-image: linear-gradient(to right, #478e44, #5dbf6f); /* Gradiente */
+    color: #fff; /* Cor do texto quando o checkbox está marcado */
+	font-weight: bold;
+}
+
+/* Estilo para remover completamente o contorno padrão dos campos de formulário focados */
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+select:focus,
+textarea:focus {
+    outline: none !important; /* Remove completamente o contorno padrão */
+    box-shadow: none !important; /* Remove qualquer sombra aplicada */
+    border-color: #629d53 !important; /* Define a cor do contorno como verde */
+}
+
+/* Estilo para o botão de copiar */
+
+#copySignatureButton {
+    padding: 12px 24px; 
+    font-size: 18px; 
+    font-weight: bold; 
+    background-color: #4CAF50; 
+    color: #fff; 
+    border: none; 
+    border-radius: 15px; 
+    cursor: pointer; 
+    transition: background-color 0.3s, box-shadow 0.3s;
+    background-image: linear-gradient(to right, #478e44, #5dbf6f); /* Gradiente */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombras */
+}
+
+#copySignatureButton:hover {
+    background-image: linear-gradient(to right, #478e44, #5dbf6f); /* Gradiente */
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
